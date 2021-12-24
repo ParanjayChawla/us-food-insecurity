@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>US Food Insecurity During the COVID-19 Pandemic</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container-xxl p-5">
+      <h1 class="display-6 text-center mb-5"
+        >US Food Insecurity During the COVID-19 Pandemic</h1
+      >
+      <div class="introduction mb-4">
+        <p
+          >The ongoing COVID-19 pandemic has a great impact on people's lives,
+          and has brought a lot of underlying socioeconomic issues to light.
+          Food insecurity issue is one of them that we will be looking at today.
+        </p>
+        <p>
+          Food is a basic human need, and having a consistent access to enough
+          food to sustain a healthy life is absolutely essential.
+        </p>
+        <p
+          >The United States Census Bureau's Pulse Survey includes a section of
+          Food Sufficiency for Households. We'll look at the dataset and see how
+          different demographics experience food insecurity issue differently
+          throughout the pandemic.</p
+        >
+        <p>
+          Use the following toggle buttons to switch between the different
+          demographic category breakdowns.
+        </p>
+        <p>
+          The stacked area charts are drawn for each demographic within the
+          demographic category. Hovering over the charts will show a stacked bar
+          chart of the zoomed in view of a specific week.
+        </p>
+      </div>
+      <div class="mb-4">
+        <fieldset>
+          <legend class="col-form-label fw-bold"
+            >Break down by demographic category</legend
+          >
+          <div
+            class="btn-group"
+            role="group"
+            aria-label="Demographic category toggle button group"
+            id="demographic-category-toggle"
+          >
+            <input
+              type="radio"
+              class="btn-check"
+              name="demographic-category"
+              id="demographic-category-age"
+              autocomplete="off"
+              checked
+              value="Age"
+            />
+            <label class="btn btn-outline-dark" for="demographic-category-age"
+              >Age</label
+            >
+
+            <input
+              type="radio"
+              class="btn-check"
+              name="demographic-category"
+              id="demographic-category-sex-at-birth"
+              autocomplete="off"
+              value="Sex At Birth"
+            />
+            <label
+              class="btn btn-outline-dark"
+              for="demographic-category-sex-at-birth"
+              >Sex At Birth</label
+            >
+
+            <input
+              type="radio"
+              class="btn-check"
+              name="demographic-category"
+              id="demographic-category-race"
+              autocomplete="off"
+              value="Race"
+            />
+            <label class="btn btn-outline-dark" for="demographic-category-race"
+              >Race</label
+            >
+
+            <input
+              type="radio"
+              class="btn-check"
+              name="demographic-category"
+              id="demographic-category-education"
+              autocomplete="off"
+              value="Education"
+            />
+            <label
+              class="btn btn-outline-dark"
+              for="demographic-category-education"
+              >Education</label
+            >
+
+            <input
+              type="radio"
+              class="btn-check"
+              name="demographic-category"
+              id="demographic-category-marital-status"
+              autocomplete="off"
+              value="Marital Status"
+            />
+            <label
+              class="btn btn-outline-dark"
+              for="demographic-category-marital-status"
+              >Marital Status</label
+            >
+
+            <input
+              type="radio"
+              class="btn-check"
+              name="demographic-category"
+              id="demographic-category-children-present"
+              autocomplete="off"
+              value="Children Present"
+            />
+            <label
+              class="btn btn-outline-dark"
+              for="demographic-category-children-present"
+              >Children Present</label
+            >
+          </div>
+        </fieldset>
+      </div>
+      <div class="mb-4">
+        <div class="mb-1 fw-bold">Food Insecurity Levels</div>
+        <div id="swatch-legend"></div>
+      </div>
+      <div class="mb-4" id="charts-container"></div>
+    </div>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="js/wrangle-data.js"></script>
+    <script src="js/swatch-legend.js"></script>
+    <script src="js/food-insecurity-stacked-area-chart.js"></script>
+    <script src="js/food-insecurity-stacked-bar-chart.js"></script>
+    <script src="js/food-insecurity-charts.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
